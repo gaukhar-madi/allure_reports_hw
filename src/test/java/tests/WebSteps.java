@@ -8,12 +8,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 
-public class WebSteps {
+public class WebSteps extends TestBase {
 
     @Step("Открываем главную страницу")
     public void openMainPage() {
@@ -22,9 +23,10 @@ public class WebSteps {
 
     @Step("Ищем репозиторий {repo}")
     public void searchForRepository(String repo) {
-        $(".header-search-input").click();
-        $(".header-search-input").sendKeys(repo);
-        $(".header-search-input").submit();
+        $("button[aria-label*='Search']").click();
+        $("input[aria-label='Search or jump to']")
+                .setValue(repo)
+                .pressEnter();
     }
 
     @Step("Кликаем по ссылке репозитория {repo}")
@@ -37,9 +39,9 @@ public class WebSteps {
         $("#issues-tab").click();
     }
 
-    @Step("Проверяем наличие Issue с номером {issue}")
-    public void shouldSeeIssueWithNumber(int issue) {
-        $(withText("#" + issue)).should(Condition.exist);
+    @Step("Проверяем наличие Issue с названием {issue}")
+    public void shouldSeeIssueWithName(String issue) {
+        $(byText(issue)).shouldBe(Condition.visible);
     }
 
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")

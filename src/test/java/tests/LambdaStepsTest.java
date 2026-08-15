@@ -3,10 +3,11 @@ package tests;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Allure;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Selectors.withText;
+
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static org.openqa.selenium.By.linkText;
 
 public class LambdaStepsTest extends TestBase {
 
@@ -18,22 +19,22 @@ public class LambdaStepsTest extends TestBase {
         });
 
         Allure.step("Найти репозиторий gaukhar-madi/allure_reports_hw", () -> {
-            $(".input-button").click();
-            $("#query-builder-test")
+            $("button[aria-label*='Search']").click();
+            $("input[aria-label='Search or jump to']")
                     .setValue("gaukhar-madi/allure_reports_hw")
                     .pressEnter();
         });
 
         Allure.step("Открыть репозиторий", () -> {
-            $(By.linkText("gaukhar-madi/allure_reports_hw")).click();
+            $(linkText("gaukhar-madi/allure_reports_hw")).click();
         });
 
         Allure.step("Перейти во вкладку Issues", () -> {
             $("#issues-tab").click();
         });
 
-        Allure.step("Проверить наличие Issue #1", () -> {
-            $(withText("#1")).should(Condition.exist);
+        Allure.step("Проверить наличие конкретного Issue", () -> {
+            $(byText("Allure Homework Issue")).shouldBe(Condition.visible);
         });
     }
 }

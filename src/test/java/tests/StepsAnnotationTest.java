@@ -12,6 +12,6 @@ public class StepsAnnotationTest extends TestBase {
         steps.searchForRepository("gaukhar-madi/allure_reports_hw");
         steps.clickOnRepositoryLink("gaukhar-madi/allure_reports_hw");
         steps.openIssuesTab();
-        steps.shouldSeeIssueWithNumber(1);
+        steps.shouldSeeIssueWithName("Allure Homework Issue");
     }
 }
