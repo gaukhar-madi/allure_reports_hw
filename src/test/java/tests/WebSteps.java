@@ -43,9 +43,4 @@ public class WebSteps {
     public void shouldSeeIssueWithName(String issue) {
         $(byText(issue)).shouldBe(Condition.visible);
     }
-
-    @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
-    public byte[] takeScreenshot() {
-        return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }
 }

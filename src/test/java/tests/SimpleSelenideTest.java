@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 
-public class SimpleSelenideTest extends TestBase {
+public class SimpleSelenideTest {
 
     @Test
     public void testIssueSearch() {
