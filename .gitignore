@@ -24,6 +24,7 @@ hs_err_pid*
 replay_pid*
 gradlew
 gradlew.bat
-.idea
-.gradle
-build/.idea/
+.idea/
+build/
+.gradle/
+out/
