@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-descriptions-javadoc/2.35.2/acb55e3599c5cf121070aee118ef32255d223468/allure-descriptions-javadoc-2.35.2.jar" />
+        </processorPath>
+        <module name="allure_hw.main" />
+        <module name="allure_hw.test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="allure_hw" target="23" />
+      <module name="allure_hw.main" target="23" />
+      <module name="allure_hw.test" target="23" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

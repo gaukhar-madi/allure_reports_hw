@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.qameta.allure:allure-selenide:2.33.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.qameta.allure" artifactId="allure-selenide" version="2.33.0" baseVersion="2.33.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-selenide/2.33.0/71d20261ff091b47bb88f23525a123835459e5b6/allure-selenide-2.33.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

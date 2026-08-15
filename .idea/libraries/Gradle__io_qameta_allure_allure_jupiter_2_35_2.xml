@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.qameta.allure:allure-jupiter:2.35.2" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.qameta.allure" artifactId="allure-jupiter" version="2.35.2" baseVersion="2.35.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-jupiter/2.35.2/62e785887d7bb15d3503f433feb663615a2d62ae/allure-jupiter-2.35.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
